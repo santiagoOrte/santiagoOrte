@@ -1,0 +1,32 @@
+/*
+ * decorations.css
+ * ================
+ * Estilos del fondo decorativo (ramas y hojas).
+ * Si quieres cambiar los colores de las hojas, hazlo aquí
+ * o directamente en el SVG de index.html.
+ */
+
+.leaf-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 1;
+}
+
+/* Animación sutil de flotado para algunas hojas */
+.leaf--float {
+  animation: leafFloat 8s ease-in-out infinite;
+  transform-origin: center;
+}
+.leaf--float-slow {
+  animation: leafFloat 12s ease-in-out infinite reverse;
+  transform-origin: center;
+}
+
+@keyframes leafFloat {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-6px) rotate(1.5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}

@@ -1,0 +1,88 @@
+/*
+ * base.css
+ * =========
+ * Reset, variables de color/tipografía y estilos globales.
+ * Cambia las variables en :root para ajustar toda la paleta de un solo lugar.
+ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ── Variables ── */
+:root {
+  /* Paleta principal */
+  --color-bark:         #5c3d2e;   /* café oscuro – textos principales */
+  --color-bark-mid:     #7a5240;   /* café medio  – acentos */
+  --color-soil:         #3b2318;   /* café muy oscuro – headings */
+  --color-cream:        #f5ede0;   /* crema       – fondo general */
+  --color-cream-dark:   #ecdcc8;   /* crema oscuro – hover/bordes */
+  --color-parchment:    #e8d8c0;   /* pergamino   – fondo tarjetas */
+  --color-sand:         #c9a87c;   /* arena       – acentos dorados */
+
+  /* Verdes */
+  --color-sage:         #7a9e7e;   /* salvia      – acento principal */
+  --color-sage-light:   #a8c5a0;   /* salvia claro */
+  --color-moss:         #4d7358;   /* musgo       – botones */
+  --color-fern:         #8fad82;   /* helecho     – decorativo */
+
+  /* Tipografía */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Lora', Georgia, serif;
+
+  /* Espacios */
+  --space-xs:  0.4rem;
+  --space-sm:  0.8rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+
+  /* Radio de bordes */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Sombras */
+  --shadow-card: 0 8px 28px rgba(59, 35, 24, 0.10);
+  --shadow-hover: 0 14px 38px rgba(59, 35, 24, 0.16);
+
+  /* Transición estándar */
+  --transition: 0.25s ease;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-soil);
+  background-color: var(--color-cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Scrollbar sutil ── */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: var(--color-cream); }
+::-webkit-scrollbar-thumb { background: var(--color-sand); border-radius: var(--radius-pill); }

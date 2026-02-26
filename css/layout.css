@@ -1,0 +1,134 @@
+/*
+ * layout.css
+ * ===========
+ * Estructura general: header, main, footer y el fondo decorativo.
+ */
+
+/* ── Fondo decorativo (ramas y hojas SVG) ── */
+.leaf-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.leaf-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Header ── */
+.site-header {
+  position: relative;
+  z-index: 10;
+  padding: 3.5rem var(--space-md) var(--space-lg);
+  text-align: center;
+  background: linear-gradient(180deg, rgba(92, 61, 46, 0.07) 0%, transparent 100%);
+  border-bottom: 1.5px solid rgba(92, 61, 46, 0.13);
+}
+
+.header__ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.header__ornament-line {
+  width: 56px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, var(--color-sand));
+  display: block;
+}
+.header__ornament-line:last-child {
+  background: linear-gradient(90deg, var(--color-sand), transparent);
+}
+.header__ornament-icon {
+  font-size: 1.4rem;
+}
+
+.site-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 600;
+  color: var(--color-bark);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.site-header__subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--color-moss);
+  font-size: 1.05rem;
+  margin-top: var(--space-xs);
+  opacity: 0.85;
+}
+
+/* ── Main ── */
+.site-main {
+  position: relative;
+  z-index: 10;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md) var(--space-xl);
+}
+
+/* ── Section heading ── */
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  color: var(--color-bark);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-sand), transparent);
+}
+
+/* ── Footer ── */
+.site-footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.82rem;
+  color: rgba(92, 61, 46, 0.45);
+  font-style: italic;
+  border-top: 1px solid rgba(92, 61, 46, 0.1);
+}
+.site-footer a {
+  color: var(--color-sage);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Empty state ── */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  color: rgba(92, 61, 46, 0.4);
+  font-style: italic;
+  line-height: 2;
+}
+.empty-state code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+  background: rgba(92, 61, 46, 0.08);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-style: normal;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .site-main {
+    padding: var(--space-md) var(--space-sm) var(--space-xl);
+  }
+}
