@@ -1,8 +1,7 @@
 /**
  * projects.js
  * ============
- * Aquí defines tus proyectos. Para añadir, quitar o editar uno,
- * simplemente modifica este arreglo y sube los cambios a GitHub.
+ * Aquí se define proyectos
  *
  * Campos disponibles por proyecto:
  *   name    (string)   – Nombre del proyecto              [obligatorio]
@@ -33,5 +32,12 @@ const PROJECTS = [
     image:  ""
   },
 
-  // ── Añade más proyectos aquí ──
+  {
+    name:   "Arbol Binario",
+    desc:   "un  projecto de arbol binario que inserta, elimina y recorre IN PRE y POST onden \nMostrandolo Graficamente ",
+    tags:   ["Java", "Arbol", "Grafico"],
+    github: "https://github.com/santiagoOrte/Projects/tree/main/BinaryTree",
+    demo:   "",
+    image:  ""
+  },
 ];
