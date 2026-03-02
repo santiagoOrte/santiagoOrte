@@ -38,6 +38,6 @@ const PROJECTS = [
     tags:   ["Java", "Arbol", "Grafico"],
     github: "https://github.com/santiagoOrte/Projects/tree/main/BinaryTree",
     demo:   "",
-    image:  ""
+    image:  "{css,js,assets/img,assets/imProj/BinaryTree.PNG"
   },
 ];
