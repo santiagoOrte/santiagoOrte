@@ -25,16 +25,16 @@
 const PROJECTS = [
   {
     name:   "Proyecto de ejemplo",
-    desc:   "Este es un proyecto de muestra. Edita el archivo js/projects.js para reemplazarlo con los tuyos.",
+    desc:   "Este es un proyecto de muestra.",
     tags:   ["Demo", "Inicio"],
-    github: "https://github.com",
+    github: "",
     demo:   "",
     image:  ""
   },
 
   {
     name:   "Arbol Binario",
-    desc:   "un  projecto de arbol binario que inserta, elimina y recorre IN PRE y POST onden \nMostrandolo Graficamente ",
+    desc:   "Un proyecto de arbol binario que Inserta, Elimina y Recorre IN, PRE y POST orden \nGraficamente ",
     tags:   ["Java", "Arbol", "Grafico"],
     github: "https://github.com/santiagoOrte/Projects/tree/main/BinaryTree",
     demo:   "",
